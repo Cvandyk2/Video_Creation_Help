@@ -1,6 +1,9 @@
 import os
 from gtts import gTTS
 
+# === Tip Jar ===
+"https://www.paypal.com/paypalme/chancevandyke"
+
 # 👇 Replace with your .txt filename
 TEXT_FILE_NAME = "video.txt"
 OUTPUT_NAME = "speech.mp3"
