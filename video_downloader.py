@@ -1,5 +1,8 @@
 import yt_dlp
 
+# === Tip Jar ===
+"https://www.paypal.com/paypalme/chancevandyke"
+
 # === 📋 PASTE YOUR VIDEO URLs HERE ===
 VIDEO_URLS = [
     "url"
