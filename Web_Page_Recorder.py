@@ -3,6 +3,9 @@ import subprocess
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
+# === Tip Jar ===
+"https://www.paypal.com/paypalme/chancevandyke"
+
 # ==== SETTINGS ====
 CHROMEDRIVER = "/opt/homebrew/bin/chromedriver"  # Update this
 URL = "url here"  # copy and paste public url here
