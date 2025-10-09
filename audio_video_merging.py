@@ -98,7 +98,7 @@ def mux_looped(video_path, audio_path, output_path, audio_seconds):
 				vcodec="libx264",
 				r=FPS, pix_fmt="yuv420p", crf=CRF, preset="medium", movflags="+faststart"
 			)
-			out.overwrite_output().run()
+			out.over_output().run()
 			seg_paths.append(seg_out)
 
 		# Build concat list: main video (trimmed), then photo segments (video only)
@@ -113,9 +113,9 @@ def mux_looped(video_path, audio_path, output_path, audio_seconds):
 
 		concat_list = os.path.join(tmpdir, "concat.txt")
 		with open(concat_list, "w", encoding="utf-8") as f:
-			f.write(f"file '{main_seg}'\n")
 			for seg in seg_paths:
 				f.write(f"file '{seg}'\n")
+			f.write(f"file '{main_seg}'\n")
 
 		# Final concat (video only), then overlay audio and trim to audio duration
 		concat_vid = os.path.join(tmpdir, "concat_final.mp4")
